@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pickupHead
   - Hurdle
+  - ground
   layers:
   - Default
   - TransparentFX
