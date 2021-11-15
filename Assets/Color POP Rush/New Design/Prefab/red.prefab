@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sphere red
       objectReference: {fileID: 0}
+    - target: {fileID: 650554018101923298, guid: 9de9834f7372d354b919a6bcea05ae37, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6213784311793246384, guid: 9de9834f7372d354b919a6bcea05ae37, type: 3}
       propertyPath: m_RootOrder
       value: 0
