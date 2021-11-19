@@ -6,6 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/menu.unity
+    guid: 933dde11c2cc0834dbbacd4c356753a9
+  - enabled: 1
     path: Assets/Color POP Rush/New Design/Scenes/1.unity
     guid: 057965e6925a39147aebd36cb19082cd
+  - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/2.unity
+    guid: db729ee9c2d9af44fbfb2cbe56e8388a
+  - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/3.unity
+    guid: 13b5bdca858c5734f9cda4e86bbdde7c
+  - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/4.unity
+    guid: 1027fd4d163983241bc9e86cb873ec46
+  - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/5.unity
+    guid: 8070996f57136064e8a2ee88a334d017
+  - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/6.unity
+    guid: cfcebd44b81d46a48816223e4bc345e6
+  - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/7.unity
+    guid: 38a1d5da08465f14abae77f2fa9e19aa
+  - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/8.unity
+    guid: de281dc3d3c2293499f32974ef657bce
+  - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/9.unity
+    guid: 1bcecda58910d594aba8671fddb5cd91
+  - enabled: 1
+    path: Assets/Color POP Rush/New Design/Scenes/10.unity
+    guid: c8ea1da869ffe5444ad6083c5c8c859a
+  - enabled: 0
+    path: Assets/test.unity
+    guid: 92c35ee91d56ed44c98a8898aa56a194
   m_configObjects: {}

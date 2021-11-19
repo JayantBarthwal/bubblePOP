@@ -4,6 +4,12 @@ using UnityEngine;
 using System;
 using EZCameraShake;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+[Serializable]
+public struct allColor { 
+public Color ball,ground,hurdle,sideGround;
+}
 public class popManager : MonoBehaviour
 {
     public delegate void pointerUp();
@@ -24,6 +30,15 @@ public class popManager : MonoBehaviour
     public GameObject instruction,wonScreen,loseScreen,bubbleBurst;
     bool gameStarted=false;
     public GameObject popSound, gemSound;
+    public GameObject ballEffect,brokenBall;
+    GameObject finish,eff;
+    public float lvlSpeed=4;
+    public Text lvlText;
+    public allColor[] clr;
+    public Material ballMat,groundMat,hurdleMat,sideGroundMat,h1, h2;
+    [HideInInspector]public Color mainBallColor;
+
+    public int colorIndex;
     private void Awake()
     {
         if (instance==null)
@@ -33,9 +48,26 @@ public class popManager : MonoBehaviour
     }
     void Start()
     {
-        
+        setColors();
+        lvlText.text = "LEVEL :"+SceneManager.GetActiveScene().name;
+        popEnvironment.instance.speed = lvlSpeed;
+        finish = GameObject.Find("Finish");
+        eff = finish.transform.Find("effects").gameObject;
     }
+    void setColors() {
+        int n = int.Parse(SceneManager.GetActiveScene().name);
+        if(n>10)n = n / 10;
+        colorIndex = n-1;
+        mainBallColor = clr[colorIndex].ball;
+        ballMat.color = clr[colorIndex].ball;
+        groundMat.color = clr[colorIndex].ground;
+        hurdleMat.color = clr[colorIndex].hurdle;
+        sideGroundMat.color = clr[colorIndex].sideGround;
 
+        h1.color = hurdleMat.color;
+        h2.color = Color.white;
+
+    }
     void Update()
     {
         
@@ -66,11 +98,23 @@ public class popManager : MonoBehaviour
 
     public void gameWon() {
         Taptic.Medium();
-        wonScreen.SetActive(false);
+        eff.SetActive(true);
+        popEnvironment.instance.slowStop();
+        wonScreen.SetActive(true);
+        Camera.main.transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void nextLevelBtnPressed() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        int myBuildIndex = SceneManager.GetActiveScene().buildIndex;//next level btn
+        myBuildIndex += 1;
+        int totalScene = SceneManager.sceneCountInBuildSettings;
+        print(myBuildIndex + "|" + totalScene);
+        if (myBuildIndex == totalScene)
+        {
+            myBuildIndex = 1;//0 is menu
+        }
+        PlayerPrefs.SetInt("levelPointer", myBuildIndex);
+        SceneManager.LoadScene(myBuildIndex);
     }
     public void restartClicked() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

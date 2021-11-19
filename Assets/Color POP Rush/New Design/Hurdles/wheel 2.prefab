@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1497016775762659221}
   - component: {fileID: 524665665081667117}
   - component: {fileID: 5692116333847978130}
+  - component: {fileID: 7123790195707634009}
   m_Layer: 0
   m_Name: wheel 2
-  m_TagString: Untagged
+  m_TagString: Hurdle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,10 +92,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4149573039003370476}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -125435165217083709, guid: 5c882afc52dabd84a8a513682f0a7995, type: 3}
 --- !u!111 &5692116333847978130
@@ -104,7 +105,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4149573039003370476}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 879e82ba5019c324e94928b1966cdac4, type: 2}
   m_Animations:
@@ -113,3 +114,16 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &7123790195707634009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4149573039003370476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22716a3144c6ebc45a9dd6f1b8c092ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rot: {x: 0, y: -250, z: 0}

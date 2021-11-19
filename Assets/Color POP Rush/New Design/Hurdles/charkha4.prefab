@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7026642645225881496}
   - component: {fileID: 4820310094712923346}
   - component: {fileID: 2754720958608425260}
+  - component: {fileID: 7476386683071973104}
   m_Layer: 0
   m_Name: charkha4
-  m_TagString: Untagged
+  m_TagString: Hurdle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,9 +91,22 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313295467356679397}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3390558720134950976, guid: 5c882afc52dabd84a8a513682f0a7995, type: 3}
+--- !u!114 &7476386683071973104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313295467356679397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22716a3144c6ebc45a9dd6f1b8c092ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rot: {x: 0, y: 0, z: 150}

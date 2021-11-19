@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class popEnvironment : MonoBehaviour
 {
+    public static popEnvironment instance;
     bool startNow = false;
+
+    [HideInInspector]public float speed;
+    private void Awake()
+    {
+        if (instance==null)
+        {
+            instance = this;
+        }
+    }
     void Start()
     {
         popManager.instance.onGameStart += gameStartedFn;
@@ -16,7 +26,11 @@ public class popEnvironment : MonoBehaviour
     {
         if (startNow)
         {
-            transform.Translate(Vector3.back*2f*Time.deltaTime);
+            transform.Translate(Vector3.back*speed*Time.deltaTime);
+        }
+        if (slow)
+        {
+            speed = Mathf.Lerp(speed,0,Time.deltaTime*.5f);
         }
     }
     void gameStartedFn() {
@@ -25,5 +39,9 @@ public class popEnvironment : MonoBehaviour
     void gameEndedFn()
     {
         startNow = false;
+    }
+    bool slow = false;
+    public void slowStop() {
+        slow = true;
     }
 }

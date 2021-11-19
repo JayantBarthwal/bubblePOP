@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8854695189012517601}
   - component: {fileID: 8258393838037863431}
   - component: {fileID: 286933297998283752}
+  - component: {fileID: 1294174722}
   m_Layer: 0
   m_Name: pendulum1
-  m_TagString: Untagged
+  m_TagString: Hurdle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167403975799397678}
-  m_LocalRotation: {x: 0.7093768, y: 0, z: -0, w: 0.70482945}
+  m_LocalRotation: {x: 0.70938027, y: 0, z: 0, w: 0.70482606}
   m_LocalPosition: {x: 0, y: 4.5836315, z: 0}
-  m_LocalScale: {x: 0.22048177, y: 0.32956406, z: 0.32956406}
+  m_LocalScale: {x: 0.22048177, y: 0.32956403, z: 0.32956403}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90.36902, y: 0, z: 0}
 --- !u!33 &8854695189012517601
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -91,9 +92,25 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167403975799397678}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1907608370310603259, guid: 5c882afc52dabd84a8a513682f0a7995, type: 3}
+--- !u!111 &1294174722
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167403975799397678}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c3708f24ba88995409844551ca56735c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: c3708f24ba88995409844551ca56735c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
