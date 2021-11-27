@@ -400,7 +400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1238880077
 Transform:
   m_ObjectHideFlags: 0
@@ -486,8 +486,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.23529413, g: 0.5058824, b: 0.9450981, a: 1}
-      key1: {r: 0.23529413, g: 0.5058824, b: 0.9450981, a: 0}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -976,51 +976,52 @@ MonoBehaviour:
   clr:
   - ball: {r: 1, g: 1, b: 1, a: 1}
     ground: {r: 0, g: 0, b: 0, a: 1}
-    hurdle: {r: 1, g: 0, b: 0, a: 1}
+    hurdle: {r: 0.9339623, g: 0.22379847, b: 0.22379847, a: 1}
     sideGround: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   - ball: {r: 1, g: 1, b: 1, a: 1}
-    ground: {r: 1, g: 0.8581603, b: 0.17358488, a: 1}
-    hurdle: {r: 1, g: 0, b: 0, a: 1}
-    sideGround: {r: 0, g: 0, b: 0, a: 1}
-  - ball: {r: 0.7962264, g: 0.84101576, b: 1, a: 1}
+    ground: {r: 0, g: 0, b: 0, a: 1}
+    hurdle: {r: 1, g: 0.6627451, b: 1, a: 1}
+    sideGround: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
+  - ball: {r: 1, g: 1, b: 1, a: 1}
     ground: {r: 0.79016227, g: 0.17254901, b: 1, a: 1}
-    hurdle: {r: 0.5229845, g: 0, b: 1, a: 1}
-    sideGround: {r: 0.19631517, g: 0, b: 0.33962262, a: 1}
-  - ball: {r: 0.79607844, g: 0.9621682, b: 1, a: 1}
-    ground: {r: 0, g: 0.6923077, b: 1, a: 1}
-    hurdle: {r: 0, g: 0.47150326, b: 1, a: 1}
-    sideGround: {r: 0, g: 0, b: 0, a: 1}
-  - ball: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
-    ground: {r: 1, g: 1, b: 1, a: 1}
-    hurdle: {r: 1, g: 0, b: 0.07204962, a: 1}
-    sideGround: {r: 0.19631517, g: 0, b: 0.33962262, a: 1}
-  - ball: {r: 1, g: 0.98533964, b: 0.79607844, a: 1}
-    ground: {r: 1, g: 0.93291247, b: 0.645283, a: 1}
-    hurdle: {r: 1, g: 0.7183187, b: 0, a: 1}
-    sideGround: {r: 0, g: 0, b: 0, a: 1}
-  - ball: {r: 0.8582646, g: 1, b: 0.79607844, a: 1}
+    hurdle: {r: 1, g: 0.9950096, b: 0.24905658, a: 1}
+    sideGround: {r: 0.72075474, g: 0.3433962, b: 1, a: 1}
+  - ball: {r: 1, g: 1, b: 1, a: 1}
+    ground: {r: 0.34901962, g: 0.5137255, b: 0.98039216, a: 1}
+    hurdle: {r: 1, g: 0.99209887, b: 0.15471691, a: 1}
+    sideGround: {r: 0.11698109, g: 0.779468, b: 1, a: 1}
+  - ball: {r: 1, g: 1, b: 1, a: 1}
+    ground: {r: 1, g: 0.24905658, b: 0.24905658, a: 1}
+    hurdle: {r: 0, g: 0, b: 0, a: 1}
+    sideGround: {r: 1, g: 0.29068598, b: 0.1830188, a: 1}
+  - ball: {r: 1, g: 1, b: 1, a: 1}
+    ground: {r: 0.8509804, g: 0.7764706, b: 0.9254902, a: 1}
+    hurdle: {r: 1, g: 0.18431373, b: 0.57254905, a: 1}
+    sideGround: {r: 0.846086, g: 0.3611783, b: 0.9716981, a: 1}
+  - ball: {r: 1, g: 1, b: 1, a: 1}
     ground: {r: 1, g: 0.80104417, b: 0.43921566, a: 1}
     hurdle: {r: 1, g: 0, b: 0.09555626, a: 1}
-    sideGround: {r: 0.19631517, g: 0, b: 0.33962262, a: 1}
-  - ball: {r: 1, g: 0.79607844, b: 0.98533964, a: 1}
+    sideGround: {r: 1, g: 0.9407446, b: 0.22075468, a: 1}
+  - ball: {r: 1, g: 1, b: 1, a: 1}
     ground: {r: 1, g: 0.4660377, b: 0.9620405, a: 1}
-    hurdle: {r: 1, g: 0, b: 0.826179, a: 1}
-    sideGround: {r: 0, g: 0, b: 0, a: 1}
-  - ball: {r: 0.86904573, g: 1, b: 0.79607844, a: 1}
+    hurdle: {r: 0, g: 0, b: 0, a: 1}
+    sideGround: {r: 0.9530692, g: 0, b: 1, a: 1}
+  - ball: {r: 1, g: 1, b: 1, a: 1}
     ground: {r: 0.5226415, g: 1, b: 0.68779397, a: 1}
-    hurdle: {r: 0.5669384, g: 1, b: 0, a: 1}
+    hurdle: {r: 0, g: 0.5622411, b: 1, a: 1}
     sideGround: {r: 0.23260948, g: 0.509434, b: 0.39674434, a: 1}
-  - ball: {r: 1, g: 0.79607844, b: 0.98076206, a: 1}
-    ground: {r: 1, g: 0.4943396, b: 0.9784315, a: 1}
-    hurdle: {r: 1, g: 0, b: 0.9389682, a: 1}
-    sideGround: {r: 0.66355604, g: 0.36614454, b: 0.8018868, a: 1}
+  - ball: {r: 1, g: 1, b: 1, a: 1}
+    ground: {r: 0.49411762, g: 0.71962, b: 1, a: 1}
+    hurdle: {r: 0.98853076, g: 1, b: 0, a: 1}
+    sideGround: {r: 0.3647059, g: 0.58775, b: 0.8, a: 1}
   ballMat: {fileID: 2100000, guid: 1d968676f2a7f0c46a916f3b77d3cfd6, type: 2}
   groundMat: {fileID: 2100000, guid: 00bc9b5b16b5caa45a21f02b471eda8c, type: 2}
   hurdleMat: {fileID: 2100000, guid: b8ecf562ca3330e478076860680ddd0a, type: 2}
   sideGroundMat: {fileID: 2100000, guid: 8c4725a1b1fa2d24b8087242f8fdd6ed, type: 2}
   h1: {fileID: 2100000, guid: d7d2b35f6e83c4846997b66ff41e96b0, type: 2}
   h2: {fileID: 2100000, guid: 1b02c8028fa37ee449837bea4e03f15e, type: 2}
-  colorIndex: 9
+  mainBallColor: {r: 0, g: 0, b: 0, a: 0}
+  colorIndex: 3
 --- !u!1001 &4078322089410938136
 PrefabInstance:
   m_ObjectHideFlags: 0
