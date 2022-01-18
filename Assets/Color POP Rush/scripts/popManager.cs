@@ -29,7 +29,7 @@ public class popManager : MonoBehaviour
 
     public GameObject instruction,wonScreen,loseScreen,bubbleBurst;
     bool gameStarted=false;
-    public GameObject popSound, gemSound;
+    public GameObject popSound, gemSound,crackSound;
     public GameObject ballEffect,brokenBall;
     GameObject finish,eff;
     public float lvlSpeed=4;
@@ -124,6 +124,11 @@ public class popManager : MonoBehaviour
     public void playPopSound() {
         GameObject pop = Instantiate(popSound, transform);
         Destroy(pop,.5f);
+    }
+    public void playCrackSound()
+    {
+        GameObject pop = Instantiate(crackSound);
+        Destroy(pop, 2f);
     }
     public void playGemSound() {
         GameObject pop = Instantiate(gemSound, transform);

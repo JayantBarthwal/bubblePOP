@@ -969,6 +969,7 @@ MonoBehaviour:
   bubbleBurst: {fileID: 2324561599372409344, guid: 691bd1095b7e28743b89606a7f3cbb74, type: 3}
   popSound: {fileID: 4625161581953025022, guid: d97a78561c2d7a546a6296db9957a2af, type: 3}
   gemSound: {fileID: 878069408777410465, guid: bc13e017a94a6714689a77339fd25aeb, type: 3}
+  crackSound: {fileID: 3344422525693952634, guid: 5144ffc4b23ed054abab8d2108d93d07, type: 3}
   ballEffect: {fileID: 3865554824223910820, guid: 0478ebdb0c0009d4c8ba9a8f8077709c, type: 3}
   brokenBall: {fileID: 8437693929909678910, guid: 768ef465de0a4584e8907aad9c430f8f, type: 3}
   lvlSpeed: 3.5

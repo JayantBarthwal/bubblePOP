@@ -13,6 +13,7 @@ public class rayShootScript : MonoBehaviour
     float mag;
     public Transform ball;
     Vector3 oldPos, newPos;
+    Vector3 vel;
     void Start()
     {
        
@@ -30,7 +31,7 @@ public class rayShootScript : MonoBehaviour
     void Update()
     {
         //ball.transform.Rotate(rb.velocity.x*500,0,rb.velocity.z*500);
-        rb.velocity = new Vector3(rb.velocity.x,-20,rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x,-5,rb.velocity.z);
         if (popManager.pointerDown && canShoot)
         {
             mag = rb.velocity.magnitude;
@@ -51,14 +52,16 @@ public class rayShootScript : MonoBehaviour
                     transform.position = Vector3.Lerp(transform.position, newPos, 16 * Time.deltaTime);
                 }
             }
-            
-
+            newPos = transform.position;
+            vel=(newPos - oldPos) / Time.deltaTime;
+            oldPos = transform.position;
         }
-      /*  if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
-            print(rb.velocity * mag);
-            rb.AddForce(rb.velocity * mag);
-        }*/
+            // print(rb.velocity * mag);
+            //rb.AddForce(rb.velocity * mag);
+            rb.velocity = vel;
+        }
         
        
     }
@@ -116,6 +119,7 @@ public class rayShootScript : MonoBehaviour
     {
         if (other.CompareTag("Hurdle"))
         {
+
             gameLost();
         }
         if (other.gameObject.name=="out")
@@ -136,18 +140,21 @@ public class rayShootScript : MonoBehaviour
             {
                 gameLost();
             }
+            else {
+                CameraShaker.Instance.ShakeOnce(.6f, .6f, .2f, .2f);
+                other.enabled = false;
+                Taptic.Light();
+                popManager.instance.playPopSound();
+                other.transform.GetChild(0).gameObject.SetActive(false);
+                GameObject eff = Instantiate(popManager.instance.bubbleBurst, other.transform.position, transform.rotation);
+                // eff.GetComponentInChildren<ParticleSystem>().startColor = Color.red;
+                Destroy(eff, 2f);
+                GameObject eff3 = Instantiate(popManager.instance.ballEffect, other.transform.position + Vector3.up, transform.rotation, other.transform);
+                // eff.GetComponentInChildren<ParticleSystem>().startColor = Color.red;
+                Destroy(eff3, 2f);
+            }
            
-            CameraShaker.Instance.ShakeOnce(.6f, .6f, .2f, .2f);
-            other.enabled = false;
-            Taptic.Light();
-            popManager.instance.playPopSound();
-            other.transform.GetChild(0).gameObject.SetActive(false);
-            GameObject eff = Instantiate(popManager.instance.bubbleBurst, other.transform.position,transform.rotation);
-            // eff.GetComponentInChildren<ParticleSystem>().startColor = Color.red;
-            Destroy(eff,2f);
-            GameObject eff3 = Instantiate(popManager.instance.ballEffect, other.transform.position+Vector3.up, transform.rotation, other.transform);
-            // eff.GetComponentInChildren<ParticleSystem>().startColor = Color.red;
-            Destroy(eff3, 2f);
+            
         }
         if (other.CompareTag("Finish"))
         {
@@ -157,11 +164,14 @@ public class rayShootScript : MonoBehaviour
     }
 
     void gameLost() {
+        popManager.instance.playCrackSound();
+
         canShoot = false;
         gameObject.SetActive(false);
 
         
        GameObject bb= Instantiate(popManager.instance.brokenBall, transform.position, transform.rotation);
+
         for (int i = 0; i < bb.transform.childCount; i++)
         {
             bb.transform.GetChild(i).GetComponent<MeshRenderer>().material.color = popManager.instance.mainBallColor;
